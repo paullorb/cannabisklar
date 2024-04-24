@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function NavBar() {
   return (
     <nav>
-      <Link href="/" />
-      <Link href="/users" />
+      <Link href="/">Home</Link>
+      <Link href="/users">Users</Link>
     </nav>
   );
 }
