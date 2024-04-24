@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 export const metadata = {
   title: 'Neeeext.js',
@@ -20,15 +21,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
-        <footer style={{
-          backgroundColor: "#333",
-          color: "#fff",
-          position: "fixed",
-          bottom: 0,
-          width: "100%"
-        }}>
-          <p>Footer</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
