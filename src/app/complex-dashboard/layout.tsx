@@ -5,20 +5,26 @@ export default function DashboardLayout({
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+
+  return isLoggedIn ? (
     <>
       <div>{children}</div> {/* Content from page.tsx */}
       <div style={{ display: 'flex'}}>
-        <div style={{ flex: 1 }}>{users}</div> {/* Content from %40users/page.tsx */}
-        <div style={{ flex: 1 }}>{revenue}</div> {/* Content from %40revenue/page.tsx */}
-        <div style={{ flex: 1 }}>{notifications}</div> {/* Content from %40notifications/page.tsx */}
+        <div>{users}</div> {/* Content from %40users/page.tsx */}
+        <div>{revenue}</div> {/* Content from %40revenue/page.tsx */}
+        <div>{notifications}</div> {/* Content from %40notifications/page.tsx */}
       </div>
     </>
+  ): (
+    login
   );
 }
