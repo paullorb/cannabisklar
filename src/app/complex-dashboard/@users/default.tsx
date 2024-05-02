@@ -1,9 +1,9 @@
 import Card from "@/components/card";
 
-export default function Revenue () {
+export default function Analytics () {
   return (
     <div>
-      <Card>Revenue Metrics</Card>
+      <Card>Analytics</Card>
     </div>
   );
 }
