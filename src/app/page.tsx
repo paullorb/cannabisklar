@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './App.module.css'
+import Feedback from '@/components/Feedback'
 
 export default function Home () {
   return (
@@ -39,7 +40,7 @@ export default function Home () {
       <div>
         <h1>Nachrichten</h1>
       </div>
-
+      <Feedback />
     </section>
   );
 }
