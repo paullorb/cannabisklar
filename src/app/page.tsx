@@ -34,6 +34,9 @@ export default function Home () {
       <h2 className={styles.title}>Wo darf man rauchen?</h2>
       <Link className={styles.link} href="https://bubatzkarte.de/" target="_blank">Bubatzkarte</Link>
       </div>
+      <div className={styles.auto}>
+      <h2 className={styles.title}>Darf ich auto fahren bekifft?</h2>
+      </div>
       <div>
         <h1>Statistiken</h1>
       </div>
