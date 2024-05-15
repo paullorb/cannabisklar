@@ -30,17 +30,17 @@
   background-color: black;
 }
 
-
+.voraussetzungen {
+  line-height: 1.5;
+}
 
 .räumen {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: 0.5rem;
+  display: flex;
   padding: 0.5rem;
   background: rgb(72, 72, 72);
-  max-width: 400px;
+  max-width: 100vw;
   border-radius: 0.3rem;
+  gap: 0.5rem;
 }
 
 
@@ -51,8 +51,9 @@
   align-items: center;
   background: #7e7e7e;
   color: white;
-  padding: 0 0.5rem;
+  padding: 0 0.3rem;
   border-radius: 0.3rem;
+  flex: 1 1 50%;
 }
 
 .more {

@@ -3,7 +3,7 @@
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -11,4 +11,12 @@
 
 .footer:hover {
     background-color: #444;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: underline;
 }
