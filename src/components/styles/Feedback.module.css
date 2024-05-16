@@ -15,3 +15,11 @@
   display: flex;
   gap: 1rem;
 }
+
+.solid {
+  display:none;
+}
+
+.outline:hover {
+  scale: 1.2;
+}
