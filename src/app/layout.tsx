@@ -23,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
       <body>
         <NavBar />
         {children}
