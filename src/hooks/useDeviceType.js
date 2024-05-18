@@ -6,16 +6,16 @@ const useDeviceType = () => {
   );
 
   useEffect(() => {
-    // Early return if server-side (Next.js SSR)
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return; // Early return if server-side
 
     const handleResize = () => {
       const newDeviceType = window.innerWidth <= 600 ? 'mobile' : 'desktop';
       setDeviceType(newDeviceType);
     };
 
+    handleResize(); // Initialize with the correct value on mount
+
     window.addEventListener("resize", handleResize);
-    // Cleanup listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

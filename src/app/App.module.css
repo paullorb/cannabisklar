@@ -1,33 +1,49 @@
 .container {
   font-family: Arial;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  border: 3px solid red;
+  /* max-width: 1000px; */
 }
 
-.container::selection {
-  background-color: #b90000;
-  color: black;
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: rgb(128, 192, 255);
+  min-height: 14rem;
+  padding: 0 5rem;
 }
-.link {
+
+.heading {
+  font-family: Rubik;
+}
+
+.meldung {
+  margin: 2rem auto 1rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(224, 237, 251);
+  padding: 1rem;
+  gap: 1.8rem;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+.link, .link:visited {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: white;
-  background-color: black;
+  background-color: var(--primary-color);
   padding: 0.5rem;
   border-radius: 0.5rem;
   max-height: 1.5rem;
   margin: 0 0.5rem;
-}
-
-.link:hover, .link.active {
-  background-color: white;
-  color: black;
-}
-
-.link:visited {
-  color: white;
-  background-color: black;
 }
 
 .voraussetzungen {
@@ -37,19 +53,24 @@
 .räumen {
   display: flex;
   padding: 0.5rem;
-  background: rgb(72, 72, 72);
+  background: black;
   max-width: 100vw;
   border-radius: 0.3rem;
   gap: 0.5rem;
+  margin: 0 auto;
 }
 
+.räumen *::selection {
+  background-color: #b90000;
+  color: white;
+}
 
 .raum {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: #7e7e7e;
+  background: var(--quinary-color);
   color: white;
   padding: 0 0.3rem;
   border-radius: 0.3rem;
@@ -57,14 +78,13 @@
 }
 
 .more {
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.3rem;
-  padding: 0.4rem;
+  padding: 0 0.2rem;
 }
 
 .important {
   font-weight: bold;
-  color: greenyellow;
+  color: var(--primary-color);
 }
 
 .bubatz {

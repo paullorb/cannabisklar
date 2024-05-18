@@ -1,16 +1,27 @@
+import Image from 'next/image'
 import Link from 'next/link';
 import styles from './App.module.css'
 import Feedback from '@/components/Feedback'
+import type { AppProps } from 'next/app'
+import { Rubik } from '@next/font/google'
 
-export default function Home () {
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '700']
+})
+
+export default function Home ({Component, pageProps}: AppProps) {
   return (
-    <section className={styles.container}>
-      <h1>Home</h1>
+    <section className={`${styles.container} ${rubik.className}`}>
+      <Component {...pageProps} />
+      <div className={styles.banner}>
+        <h1 className={styles.heading}>Kenne deine Rechte als Cannabiskonsument</h1>
+      </div>
+      <div className={styles.meldung}>
+        <Image src="/information.svg" width="25" height="25" alt="information" />
+        <h2 className={styles.title}>Es ist legal Cannabis zu konsumieren und anzubauen in Deutschland, falls du 18 Jahre alt bist. Aber, wie Tabak und Alkohol, es gibt Gesetze die man vorher beachten soll.</h2>
+      </div>
       <div className={styles.kurz}>
-      <h2 className={styles.title}>Was ist jetzt neu?</h2>
-      <div className={styles.voraussetzungen}>
-          <p><span className={`${styles.important} ${styles.more}`}>18 Jährigen</span> ist der Konsum von Cannabis erlaubt</p>
-        </div>
       <div className={styles.räumen}>
         <div className={`${styles.privater} ${styles.raum}`}>
           <h3>PRIVAT</h3>
@@ -35,7 +46,7 @@ export default function Home () {
       <Link className={styles.link} href="https://bubatzkarte.de/" target="_blank">Bubatzkarte</Link>
       </div>
       <div className={styles.auto}>
-      <h2 className={styles.title}>Darf ich auto fahren bekifft?</h2>
+      <h2 className={styles.title}>Darf ich bekifft auto fahren?</h2>
       </div>
       <div>
         <h1>Statistiken</h1>

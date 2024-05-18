@@ -19,8 +19,23 @@ export default function Anbauvereinigungen () {
         <div className={styles.card}>
           <h1 className={styles.heading}>Genossenschaft</h1>
           <p>ein Zusammenschluss mehrerer natürlicher oder juristischer Personen, deren Ziel die gegenseitige Förderung durch gemeinsame wirtschaftliche Tätigkeit ist.</p>
-          </div>
+          </div>    
     </div>
+      <div>
+        <h1>Rechte einer Anbauvereinigung</h1>
+      </div>
+      <div>
+        <h1>Pflichten einer Anbauvereinigung</h1>
+        <div>
+          <h2>Satzung</h2>
+          <p>Muss enthalten:</p>
+          <p>- Mindestdauer der Mitgliedschaft von drei Monaten</p>
+          <p>- Mitglieder 18 Jahre alt sein sollen</p>
+          <p>- Mitglieder einen Wohnsitz oder gewöhnlichen Aufenthalt in Deutschland haben müssen</p>
+          <p>-  nicht vorgesehen wird, dass der Erwerb und die Fortdauer der Mitgliedschaft an einen Wohnsitz oder einen
+gewöhnlichen Aufenthalt in Deutschland geknüpft werden, </p>
+        </div>
+      </div>
     </section>
   );
 }

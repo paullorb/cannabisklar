@@ -1,5 +1,12 @@
+:root {
+  --primary-color: #5cb219;
+  --secondary-color: #239831;
+  --tertiary-color: #15761c;
+  --quaternary-color: #5d6f19;
+  --quinary-color: #836c0e;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;

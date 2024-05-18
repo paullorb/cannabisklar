@@ -6,6 +6,7 @@
   background-color: #f4f4f4;
   width: 100%;
   border: 3px solid salmon;
+  gap: 0.3rem;
 }
 
 .tabs {
@@ -15,7 +16,15 @@
 }
 
 .Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   user-select: none;
+  text-decoration:none;
+  color: black;
+  font-size: 0.7rem;
+  border: 3px solid salmon;
+  gap: 0.3rem;
 }
 
 .Link:hover {
@@ -25,4 +34,10 @@
 .active {
   color: red;  
   font-weight: bold; 
+}
+
+@media (max-width: 600px) {
+  .linkTitle {
+    display: none;
+  }
 }
