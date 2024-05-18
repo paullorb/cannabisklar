@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './App.module.css'
 import Feedback from '@/components/Feedback'
 import type { AppProps } from 'next/app'
-import { Rubik } from '@next/font/google'
+import { Rubik } from "next/font/google"
 
 const rubik = Rubik({
   subsets: ['latin'],
