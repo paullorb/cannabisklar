@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 
 import './global.css'
+import { rubik, roboto } from './fonts'
 
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html className={`${roboto.variable} ${rubik.variable}`}>
       <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
       <body>
         <NavBar />

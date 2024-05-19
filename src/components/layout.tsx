@@ -7,10 +7,10 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <html>
       <NavBar />
       {children}
       <Footer />
-    </div>
+    </html>
   );
 }

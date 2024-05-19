@@ -20,6 +20,10 @@ export default function NavBar() {
   const deviceType = useDeviceType();
   const isMobile = isMounted && deviceType === 'mobile';
   const pathname = usePathname();
+
+  const legalize_it = {
+    filter: 'grayscale(100%)',
+  }
   
   return (
     <nav className={styles.nav}>
@@ -33,7 +37,7 @@ export default function NavBar() {
       <Link 
         href="/nice" 
         className={pathname === '/nice' ? styles.active && styles.Link : styles.Link}>
-        <Image src="/legalize-it.svg" alt="company" width="25" height="25"/>
+        <Image src="/legalize-it.svg" alt="company" width="25" height="25" style={legalize_it}/>
         <h1 className={styles.linkTitle}>Cannabis</h1>
       </Link>
       <Link 

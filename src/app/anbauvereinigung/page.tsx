@@ -1,8 +1,14 @@
 import styles from './Anbauvereinigung.module.css';
 
 export default function Anbauvereinigungen () {
+  const deinstandort = "LEER"
   return (
     <section>
+      <h1>Anbauvereinigungen in meiner Nähe</h1>
+      <div className={styles.deinstandort}></div>
+      <p><button>Clicke hier</button> um in der Nähe deines Standortes eine Anbauvereinigung zu suchen.</p>
+      <p className={styles.standortIntro}>Dein Standort:</p>
+      <p className={styles.Standort}>{deinstandort}</p>
       <h1>Unternehmen</h1>
     <ul>
       <li>Die Einfuhr von Cannabis aus dem Ausland nach Deutschland bleibt hingegen verboten.</li>
