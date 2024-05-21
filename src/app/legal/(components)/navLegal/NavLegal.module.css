@@ -1,0 +1,26 @@
+.nav {
+  display:flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: rgb(234, 234, 234);
+  color: black;
+  margin: 0 0rem 3rem;
+  padding: 1rem 2rem;
+  max-width: 20rem;
+  user-select: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.Link {
+  display: flex;
+  text-decoration: none;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 1rem;
+  color: black;
+  font-weight: normal;
+}

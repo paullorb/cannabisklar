@@ -11,7 +11,7 @@ export default function Home () {
         <Image src="/information.svg" width="25" height="25" alt="information" />
         <h2 className={styles.notification}>Es ist legal Cannabis zu konsumieren und anzubauen in Deutschland, falls du 18 Jahre alt bist. Aber, wie Tabak und Alkohol, es gibt Gesetze die man vorher beachten soll.</h2>
       </div>
-      <div className={styles.intro}>
+      <div>
         <h2>Besitz, Erhalt und Anbau von Cannabis in Deutschland</h2>
         <h3>Erwachsenen ist es ab dem 1. Juli 2024 erlaubt:</h3>
         <ul>
@@ -36,8 +36,8 @@ export default function Home () {
             <p>Kinder und Jugendeinrichtungen,</p>
             <p>innnerhalb des befriedeten Eigentums von Anbauvereinigungen</p>
           </div>
-          <p>in öffentlich zugänglichen Sportstätten</p>
-          <p>in Fußgängerzonen zwischen 7 und 20 Uhr</p>
+          <p>In öffentlich zugänglichen Sportstätten,</p>
+          <p>in Fußgängerzonen zwischen 7 und 20 Uhr und</p>
           <p>in militärischen Bereichen der Bundeswehr.</p>
         </div>
         

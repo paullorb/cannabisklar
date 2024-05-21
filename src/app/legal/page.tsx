@@ -3,11 +3,6 @@ import styles from './Legal.module.css';
 export default function Legal () {
   return (
     <section>
-      <div className={styles.banner}>
-        <h1 className={styles.heading}>Kenne deine Rechte als Cannabiskonsument</h1>
-        <h2 className={styles.subheading}>Regeln über Erwerb, Besitz und Anbau von Cannabis in Deutschland</h2>
-      </div>
-
       <div className={styles.wenn}>
         <h2 className={styles.title}>Erwachsene dürfen:</h2>
       </div>

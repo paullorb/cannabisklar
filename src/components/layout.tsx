@@ -1,4 +1,4 @@
-import NavBar from './NavBar';
+import NavBar from './NavPrimary';
 import Footer from './Footer';
 
 export default function Layout({ 

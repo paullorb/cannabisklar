@@ -1,6 +1,6 @@
 import styles from './Anbauvereinigung.module.css';
 
-export default function Anbauvereinigungen () {
+export default function Anbauvereinigung () {
   const deinstandort = "LEER"
   return (
     <section>

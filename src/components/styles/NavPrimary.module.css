@@ -6,7 +6,8 @@
   background-color: #f4f4f4;
   width: 100%;
   gap: 0.3rem;
-  margin: 0.1rem 0 4rem;
+  margin: 0 0 1rem;
+  min-height: 7rem;
 }
 
 .tabs {
@@ -48,9 +49,5 @@
   .Link {
     background-size: 100% 0.8em;
     background-position: 100% 100%;
-  }
-
-  .linkTitle {
-    display: none;
   }
 }

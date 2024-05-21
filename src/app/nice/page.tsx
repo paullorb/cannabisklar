@@ -1,7 +1,7 @@
 import styles from './Nice.module.css'
 export default function Nice () {
   return (
-    <div>
+    <section>
       <h2>Legaler Erhalt von Cannabis</h2>
       <h3>Mitglieder einer Anbauvereinigung dürfen bereits in ihren Einrichtungen Cannabis in unterschiedlichen Formen erhalten, und zwar als: </h3>
       <ul>
@@ -20,5 +20,7 @@ export default function Nice () {
         <li>erwachsene Nichtmitglieder die ihren Wohnsitz oder gewöhnlichen Aufenthalt in Deutschland haben
         </li>
       </ul>
-    </div>
+      <h3>7 Samen oder 5 Stecklinge maximal pro Person im Monat dürfen weitergegeben werden.</h3>
+      <h3>Die Verwendung des Vermehrungsmaterials ist ausschließlich für den privaten Anbau oder zur Qualitätskontrolle des Cannabis in anderen Canabisvereinigungen</h3>
+    </section>
   )}

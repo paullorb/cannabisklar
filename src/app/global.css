@@ -37,6 +37,8 @@ body {
 
 * {
   box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
   /* margin: 0; */
   /* padding: 0; */
 }
@@ -45,8 +47,10 @@ html {
   --parentheses: 0.7; 
 }
 
-.parentheses {
-  opacity: 0.1;
+section {
+  overflow: hidden;
+  margin: 2rem auto 0rem;
+  padding: 1rem 0rem;
 }
 
 h2 {
@@ -55,4 +59,8 @@ h2 {
 
 h3 {
   font-weight: 400;
+}
+
+.parentheses {
+  opacity: 0.1;
 }

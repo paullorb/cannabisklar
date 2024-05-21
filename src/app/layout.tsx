@@ -5,13 +5,13 @@ import { Analytics } from "@vercel/analytics/react"
 import './global.css'
 import { rubik, roboto } from './fonts'
 
-import NavBar from '../components/NavBar'
+import NavPrimary from '../components/NavPrimary'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
   title: {
     absolute: '',  //
-    default: 'Cannabis einfach erklärt', // Default title for all pages
+    default: 'Cannabis in Deutschland', // Default title for all pages
     // template: '%s | Next.js', // Template title for all pages
   },
   description: 'Cannabis in Deutschland einfach erklärt',
@@ -24,9 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${roboto.variable} ${rubik.variable}`}>
-      <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+      <head>
+        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+      </head>
       <body>
-        <NavBar />
+        <NavPrimary />
         {children}
         <SpeedInsights />
         <Analytics />
