@@ -13,8 +13,6 @@
 .item {
   padding: 0 1rem;
   backdrop-filter: blur(0.4px);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  color: white;
 }
 
 .item:hover {

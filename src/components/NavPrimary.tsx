@@ -57,6 +57,12 @@ export default function NavBar() {
         <Image src="/health.svg" alt="company" width="25" height="25"/>
         {isMobile && pathname === '/gesundheit' || isDesktop && <h1 className={styles.linkTitle}>Gesundheit</h1>}
       </Link>
+      <Link 
+        href="/medien" 
+        className={pathname === '/medien' ? styles.active && styles.Link : styles.Link}>
+        <Image src="/news.svg" alt="company" width="25" height="25"/>
+        {isMobile && pathname === '/medien' || isDesktop && <h1 className={styles.linkTitle}>Medien</h1>}
+      </Link>
       </div>
       <div className={styles.world}>
         <World />
