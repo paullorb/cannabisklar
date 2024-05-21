@@ -25,7 +25,9 @@ export default function RootLayout({
   return (
     <html className={`${roboto.variable} ${rubik.variable}`}>
       <head>
-        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="any" />
+        <link rel="apple-icon" href="/apple-icon?<generated>" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-icon?<generated>" type="image/<generated>" sizes="any" />
       </head>
       <body>
         <NavPrimary />
