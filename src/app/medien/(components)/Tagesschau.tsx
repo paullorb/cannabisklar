@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { getTagesschau } from '../../../../_actions/tagesschauAction'; // Adjust the path as necessary
-import MedienComponent from './page';
+import MedienComponent from '../page';
 import { ITagesschau } from '../../../../interfaces/IPost';
 
 export default async function Medien() {
