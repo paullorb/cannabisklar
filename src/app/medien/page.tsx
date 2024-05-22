@@ -53,8 +53,8 @@ export default function Medien() {
           <h1>Tagesschau</h1>
           {data.map((item) => (
             // eslint-disable-next-line react/jsx-key
-            <Link href={item.updateCheckUrl} className={styles.link}>
-              <h2 key={item._id} className={styles.title}>{item.title}</h2>
+            <Link key={item._id} href={item.updateCheckUrl} className={styles.link}>
+              <h2 className={styles.title}>{item.title}</h2>
             </Link>
               ))}
         </div>
