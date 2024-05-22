@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb'
 import { Document } from 'mongoose'
 
 export interface IPost extends Document {
@@ -5,15 +6,10 @@ export interface IPost extends Document {
 }
 
 export interface INews extends Document {
-  title: {
-    type:  string,
-    required: true,
-  }
+  title: string,
 }
 
 export interface ITagesschau extends Document {
-  title: {
-     type :  string,
-     required: true,
-  }
+  _id: ObjectId,
+  title: string,
 }
