@@ -1,30 +1,31 @@
-"use server"
+"use server";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { getTagesschau } from '../../../../_actions/tagesschauAction'; // Adjust the path as necessary
 import MedienComponent from '../page';
 import { ITagesschau } from '../../../../interfaces/IPost';
 
 export default async function Medien() {
-  const [data, setData] = useState<ITagesschau[]>([]);
-  const [errMsg, setErrMsg] = useState<string>('');
+  let data: ITagesschau[] = [];
+  let errMsg: string = '';
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getTagesschau();
-        if (result.errMsg) {
-          setErrMsg(result.errMsg);
-        } else {
-          setData(result.data || []);
-        }
-      } catch (error) {
-        setErrMsg('Error loading data');
-      }
-    };
+  try {
+    const result = await getTagesschau();
+    if (result.errMsg) {
+      errMsg = result.errMsg;
+    } else {
+      data = result.data || [];
+    }
+  } catch (error) {
+    errMsg = 'Error loading data';
+  }
 
-    fetchData();
-  }, []);
+  // Transform the data to ITagesschauClient type
+  const simplifiedData = data.map(item => ({
+    _id: item._id.toString(),
+    title: item.title,
+    updateCheckUrl: item.updateCheckUrl,
+  }));
 
-  return <MedienComponent data={data} errMsg={errMsg} />;
+  return <MedienComponent data={simplifiedData} errMsg={errMsg} />;
 }

@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Medien.module.css';
-import { getTagesschau } from '../../../_actions/tagesschauAction';
-import { ITagesschau } from '../../../interfaces/IPost';
 import Link from 'next/link';
 
 // Adjusted interface for client-side use
@@ -13,34 +11,12 @@ interface ITagesschauClient {
   updateCheckUrl: string;
 }
 
-export default function Medien() {
-  const [data, setData] = useState<ITagesschauClient[]>([]);
-  const [errMsg, setErrMsg] = useState<string>('');
+interface MedienProps {
+  data: ITagesschauClient[];
+  errMsg: string;
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getTagesschau();
-        if (result.errMsg) {
-          setErrMsg(result.errMsg);
-        } else {
-          
-          const simplifiedData = result.data?.map(item => ({
-            _id: item._id.toString(), 
-            title: item.title,
-            updateCheckUrl: item.updateCheckUrl,
-          })) || [];
-          setData(simplifiedData);
-        }
-      } catch (error) {
-        console.error('Failed to load data', error);
-        setErrMsg('Failed to load data');
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const MedienComponent: React.FC<MedienProps> = ({ data, errMsg }) => {
   if (errMsg) {
     return <h1>{errMsg}</h1>;
   }
@@ -52,13 +28,14 @@ export default function Medien() {
         <div className={styles.tagesschau}>
           <h1>Tagesschau</h1>
           {data.map((item) => (
-            // eslint-disable-next-line react/jsx-key
             <Link key={item._id} href={item.updateCheckUrl} className={styles.link}>
               <h2 className={styles.title}>{item.title}</h2>
             </Link>
-              ))}
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default MedienComponent;
