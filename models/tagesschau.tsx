@@ -1,13 +1,12 @@
-import { Schema, model, models, Model, Document } from 'mongoose'
-import { INews } from '../interfaces/IPost'
+import { Schema, model, Model } from 'mongoose'
+import { ITagesschau } from '../interfaces/IPost'
 
-const tagesschauSchema = new Schema<INews> ({
+const tagesschauSchema = new Schema<ITagesschau> ({
   title: {
-    type: String,
-    required: true
+     type :  String 
   }
 }, {timestamps: true})
 
-const TaggesschauModel: Model<INews> = models.post || model<INews>('tagesschau', tagesschauSchema)
+const TaggesschauModel: Model<ITagesschau> = model<ITagesschau>('21-05-24', tagesschauSchema)
 
 export default TaggesschauModel

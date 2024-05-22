@@ -2,18 +2,18 @@
 
 import connectDB from "../lib/dbConnect"
 import TaggesschauModel from "../models/tagesschau"
-import { INews } from "../interfaces/IPost"
+import { ITagesschau } from "../interfaces/IPost"
 
 interface GetTagesschauRes {
-  data?: INews[]
+  data?: ITagesschau[];
   errMsg?: string;
 }
 
 export async function getTagesschau(): Promise<GetTagesschauRes> {
   try {
-    await connectDB()
+    await connectDB();
 
-    const data = JSON.parse(JSON.stringify(await TaggesschauModel.find())) as INews[];
+    const data = await TaggesschauModel.find().lean<ITagesschau[]>()
     return { data }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error';

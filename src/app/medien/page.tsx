@@ -1,10 +1,10 @@
-import { getPosts } from '../../../_actions/postAction'
 import styles from './Medien.module.css'
-import { IPost } from '../../../interfaces/IPost'
+import { ITagesschau } from '../../../interfaces/IPost'
+import { getTagesschau } from '../../../_actions/tagesschauAction'
 
 
 export default async function Medien (): Promise<JSX.Element> {
-  const {data, errMsg } = await getPosts();
+  const {data, errMsg } = await getTagesschau()
   console.log(data)
 
   if(errMsg) {
@@ -12,13 +12,11 @@ export default async function Medien (): Promise<JSX.Element> {
   } 
 
   return (
-    <section className={styles.container}>Medien
+    <section className={styles.container}>
+      <h1>Medien</h1>
       <div className={styles.media}>
       <div className={styles.tagesschau}>
         <h1>Tagesschau</h1>
-        {data?.map((item: IPost) => (
-          <h1 key={item._id as string}>{item.msg}</h1>
-        ))}
       </div>
       </div>
     </section>
