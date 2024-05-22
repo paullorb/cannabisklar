@@ -3,10 +3,11 @@ import Link from 'next/link';
 import styles from './App.module.css'
 import Feedback from '@/components/Feedback'
 
-export default function Home () {
+export default async function Home () {
   const gesetzLink = "https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/cannabisgesetz.html";
   return (
     <section className={styles.container}>
+
       <div className={styles.meldung}>
         <Image src="/information.svg" width="25" height="25" alt="information" />
         <h2 className={styles.notification}>Es ist legal Cannabis zu konsumieren und anzubauen in Deutschland, falls du 18 Jahre alt bist. Aber, wie Tabak und Alkohol, es gibt Gesetze die man vorher beachten soll.</h2>
@@ -42,7 +43,7 @@ export default function Home () {
         </div>
         
       </div>
-      <div>
+      <div className={styles.kinder}>
         <h2>Kinder- und Jugendschutz</h2>
       </div>
       <div className={styles.auto}>

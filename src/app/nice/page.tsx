@@ -1,4 +1,11 @@
+import { Metadata } from 'next'
 import styles from './Nice.module.css'
+
+export const metadata: Metadata = {
+  title: 'Cannabis',
+  description: 'Erfahre alles über legales Cannabis in Deutschland'
+}
+
 export default function Nice () {
   return (
     <section>

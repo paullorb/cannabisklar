@@ -13,6 +13,10 @@
     background-color: #444;
 }
 
+.link {
+    color: white;
+}
+
 .links {
     display: flex;
     flex-direction: row;

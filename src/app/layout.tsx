@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -10,11 +10,18 @@ import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    absolute: '',  //
-    default: 'Cannabis in Deutschland', // Default title for all pages
-    // template: '%s | Next.js', // Template title for all pages
+    default: 'Cannabis in Deutschland', 
+    template: '%s | Cannabisklar',
   },
   description: 'Cannabis in Deutschland einfach erklärt',
+  openGraph: {
+    title: 'Cannabis in Deutschland',
+    description: 'Cannabis in Deutschland einfach erklärt',
+    type: 'website',
+    locale: 'de_DE',
+    url: process.env.URL,
+    siteName: 'Cannabisklar'
+  }
 }
 
 export default function RootLayout({

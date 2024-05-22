@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Gesundheit () {
   return (
     <div>
@@ -11,11 +13,10 @@ export default function Gesundheit () {
       <div>Medien</div>
       <div>Gesundheitseinrichtungen</div>
       <div>Kommune</div>
-
-      <h6><a href="https://shop.bzga.de/pdf/3495.pdf">Quelle</a></h6>
       <h5>Nützliche Links:</h5>
-      <p><a href="https://www.cannabispraevention.de/service/infomaterialien/">CannabisPrävention.de</a> von der BZgA (Bundeszentrale für gesundheitliche Aufklärung)</p>
-      <p><a href="https://www.infos-cannabis.de/">Infos-Cannabis.de</a> auch von der BZgA</p>
+        <Link href="https://shop.bzga.de/pdf/3495.pdf">Quelle</Link>
+        <Link href="https://www.cannabispraevention.de/service/infomaterialien/">CannabisPrävention</Link>
+        <Link href="https://www.infos-cannabis.de/">Infos-Cannabis.de</Link>
     </div>
   );
 }
