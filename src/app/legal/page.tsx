@@ -35,6 +35,7 @@ export default function Legal () {
       </ul>
       <h2>Was kommt am 1.7.24?</h2>
       <h2>Was kommt am 1.1.25?</h2>
+      <h1>dada</h1>
     </section>
   );
 }
