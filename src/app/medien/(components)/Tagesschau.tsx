@@ -1,31 +1,41 @@
-"use server";
+"use client";
 
 import React from 'react';
-import { getTagesschau } from '../../../../_actions/tagesschauAction'; // Adjust the path as necessary
-import MedienComponent from '../page';
-import { ITagesschau } from '../../../../interfaces/IPost';
+import styles from '../Medien.module.css';
+import Link from 'next/link';
 
-export default async function Medien() {
-  let data: ITagesschau[] = [];
-  let errMsg: string = '';
+// Adjusted interface for client-side use
+interface ITagesschauClient {
+  _id: string;
+  title: string;
+  updateCheckUrl: string;
+}
 
-  try {
-    const result = await getTagesschau();
-    if (result.errMsg) {
-      errMsg = result.errMsg;
-    } else {
-      data = result.data || [];
-    }
-  } catch (error) {
-    errMsg = 'Error loading data';
+interface MedienProps {
+  data: ITagesschauClient[];
+  errMsg: string;
+}
+
+const MedienComponent: React.FC<MedienProps> = ({ data, errMsg }) => {
+  if (errMsg) {
+    return <h1>{errMsg}</h1>;
   }
 
-  // Transform the data to ITagesschauClient type
-  const simplifiedData = data.map(item => ({
-    _id: item._id.toString(),
-    title: item.title,
-    updateCheckUrl: item.updateCheckUrl,
-  }));
+  return (
+    <section className={styles.container}>
+      <h1>Medien</h1>
+      <div className={styles.media}>
+        <div className={styles.tagesschau}>
+          <h1>Tagesschau</h1>
+          {data.map((item) => (
+            <Link key={item._id} href={item.updateCheckUrl} className={styles.link}>
+              <h2 className={styles.title}>{item.title}</h2>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-  return <MedienComponent data={simplifiedData} errMsg={errMsg} />;
-}
+export default MedienComponent;
