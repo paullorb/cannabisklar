@@ -9,7 +9,6 @@ import Image from 'next/image';
 import useDeviceType from '@/hooks/useDeviceType.js'
 
 import styles from './styles/NavPrimary.module.css'
-import World from './World'
 
 export default function NavBar() {
   const [isMounted, setIsMounted] = useState(false)
@@ -65,7 +64,6 @@ export default function NavBar() {
       </Link>
       </div>
       <div className={styles.world}>
-        <World />
       </div>
       {isMounted && isMobile && (
       <div className={styles.hamburger}>

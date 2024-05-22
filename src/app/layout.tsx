@@ -7,6 +7,7 @@ import { rubik, roboto } from './fonts'
 
 import NavPrimary from '../components/NavPrimary'
 import Footer from '../components/Footer'
+import TopBar from '@/components/TopBar';
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +38,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-icon?<generated>" type="image/<generated>" sizes="any" />
       </head>
       <body>
+        <TopBar />
         <NavPrimary />
         {children}
         <SpeedInsights />
