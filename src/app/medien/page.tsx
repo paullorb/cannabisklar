@@ -2,14 +2,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { getTagesschau } from '../../../_actions/tagesschauAction';
-import { ITagesschau } from '../../../interfaces/IPost';
-import MedienComponent from './(components)/Tagesschau';
+import MedienComponent from './(components)/Medien';
 
 // Adjusted interface for client-side use
 interface ITagesschauClient {
   _id: string;
   title: string;
-  updateCheckUrl: string;
+  detailsweb: string;
+  date: string;
 }
 
 export default function Medien() {
@@ -26,7 +26,8 @@ export default function Medien() {
           const simplifiedData = result.data?.map(item => ({
             _id: item._id.toString(), 
             title: item.title,
-            updateCheckUrl: item.updateCheckUrl,
+            detailsweb: item.detailsweb,
+            date: item.date,
           })) || [];
           setData(simplifiedData);
         }

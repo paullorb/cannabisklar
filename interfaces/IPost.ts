@@ -12,5 +12,13 @@ export interface INews extends Document {
 export interface ITagesschau extends Document {
   _id: ObjectId,
   title: string,
-  updateCheckUrl: string,
+  detailsweb: string,
+  date: string,
+}
+
+export interface ITagesschauClient extends Document {
+  _id: string;
+  title: string;
+  detailsweb: string;
+  date: string,
 }
