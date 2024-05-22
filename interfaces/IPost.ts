@@ -12,4 +12,5 @@ export interface INews extends Document {
 export interface ITagesschau extends Document {
   _id: ObjectId,
   title: string,
+  updateCheckUrl: string,
 }
