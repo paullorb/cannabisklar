@@ -2,22 +2,24 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config();
 
-const connectDB = async (): Promise<boolean> => {
-  // Check if we're already connected
-  if (mongoose.connections[0].readyState) {
-    console.log('Already connected to MongoDB.');
-    return true;
+const connectDB = async (): Promise<void> => {
+
+  if (mongoose.connection.readyState) {
+    console.log('Already connected to MongoDB.')
+    return
   }
 
+  const dbURI = process.env.MONGO_URI || ""
+  if (!dbURI) throw new Error("MongoDB URI is not defined in environment variables.")
+
+
   try {
-    // Connect to the MongoDB URI from environment variables
-    await mongoose.connect(process.env.MONGO_URI || "");
-    console.log('MongoDB connected');
-    return true;
+
+    await mongoose.connect(dbURI)
+    console.log('MongoDB connected')
   } catch (error) {
-    // Log and handle the error
-    console.error('MongoDB connection error:', error);
-    return false;
+
+    throw error
   }
 }
 

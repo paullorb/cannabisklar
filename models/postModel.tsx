@@ -1,11 +1,6 @@
-import { Schema, model, models, Model, Document } from 'mongoose';
+import { Schema, model, Model, Document } from 'mongoose';
+import { IPost } from '../interfaces/IPost';  // Assuming IPost is moved to a separate interfaces file
 
-// Define an interface for the document using TypeScript
-export interface IPost extends Document {
-  msg: string;
-}
-
-// Define the schema with typed fields
 const postSchema = new Schema<IPost>({
   msg: {
     type: String,
@@ -13,7 +8,6 @@ const postSchema = new Schema<IPost>({
   }
 }, { timestamps: true });
 
-// Create the model conditionally if it does not already exist
-const PostModel: Model<IPost> = models.post || model<IPost>('post', postSchema);
+const PostModel: Model<IPost> = model<IPost>('Post', postSchema);
 
 export default PostModel;
