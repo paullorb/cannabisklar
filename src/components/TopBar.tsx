@@ -12,13 +12,13 @@ export default function TopBar () {
     <div className={styles.container}>
       <div className={styles.internationalization}>
         <div className={`${styles.lang} ${styles.deutsch}`}>
-          <button>deu</button>
+          <button className={styles.button}>deu</button>
         </div>
         <div className={`${styles.lang} ${styles.english}`}>
-        <button>eng</button>
+        <button className={styles.button}>eng</button>
         </div>
         <div className={`${styles.lang} ${styles.espanol}`}>
-        <button>esp</button>
+        <button className={styles.button}>esp</button>
         </div>
       </div>
         <div className={styles.updateContainer}>

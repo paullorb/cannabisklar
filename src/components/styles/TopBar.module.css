@@ -25,6 +25,11 @@
   opacity: 1;
 }
 
+.button {
+  border: none;
+  background-color: transparent;
+}
+
 .updateContainer {
   display: flex;
   justify-content: flex-end;
