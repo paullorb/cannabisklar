@@ -15,11 +15,12 @@
   opacity: 0.5;
 }
 
-.lang {
+.lang,
+.button {
   transition: 0.2s ease-in-out;
 }
 
-.lang:hover {
+.lang:hover, .button:hover {
   text-decoration: underline;
   color: green;
   opacity: 1;
