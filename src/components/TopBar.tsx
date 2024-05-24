@@ -21,7 +21,7 @@ export default function TopBar () {
         <button className={styles.button}>esp</button>
         </div>
       </div>
-        <div className={styles.updateContainer}>
+        {/* <div className={styles.updateContainer}>
           <h3 className={styles.updating}>letzte Aktualisierung:</h3>
           <div className={styles.update}>
             {<h3 className={styles.date}>{currentDate}</h3>}
@@ -30,7 +30,7 @@ export default function TopBar () {
             {<h3 className={styles.min}>{currentMin}</h3>
             }
           </div>
-        </div>
+        </div> */}
     </div>
   )
 }

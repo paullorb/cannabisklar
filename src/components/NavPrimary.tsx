@@ -37,14 +37,6 @@ export default function NavBar() {
         {isMobile && pathname === '/' || isDesktop && <h1 className={styles.linkTitle}>Haus</h1>}
       </Link>
       <Link 
-        href="/nice" 
-        className={pathname === '/nice' ? styles.active && styles.Link : styles.Link}>
-          {pathname === '/nice' ? 
-          <Image src="/legalize_it_on.svg" alt="company" width="25" height="25" style={legalize_it}/>
-        : <Image src="/legalize_it.svg" alt="company" width="25" height="25" style={legalize_it}/>}
-        {isMobile && pathname === '/nice' || isDesktop && <h1 className={styles.linkTitle}>Cannabis</h1>}
-      </Link>
-      <Link 
         href="/legal" 
         className={pathname === '/legal' ? styles.active && styles.Link : styles.Link}>
         <Image src="/legal.svg" alt="legal" width="25" height="25"/>

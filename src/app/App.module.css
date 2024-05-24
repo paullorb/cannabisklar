@@ -58,6 +58,16 @@
   align-items: center;
 }
 
+.bubatzIntro {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.protections {
+  list-style: decimal;
+  list-style-type: decimal;
+}
+
 .title {
   margin: 0 1rem 0 0;
 }

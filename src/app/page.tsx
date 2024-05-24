@@ -31,7 +31,7 @@ export default async function Home () {
         <h3>Das <a className={styles.link} href={gesetzLink}>Gesetz<Image className={styles.extern} src="/extern.svg" width="16" height="16" alt="external link" /></a> regelt nicht explizit, wo Cannabis konsumiert werden darf, sondern legt stattdessen fest, <span className={styles.underlineNOT}> wo es nicht erlaubt ist</span>, nämlich:</h3>
         <div className={styles.minors}>
           <p>in der Nähe von Minderjährigen,</p>
-          <div className={styles.ulList}>innerhalb und in der Sichtweite von: 
+          <div className={styles.ulList}>innerhalb und in der Sichtweite (maximal 100m entfernt) von: 
             <p>Schulen,</p>
             <p>Kinderspielplätzen,</p>
             <p>Kinder und Jugendeinrichtungen,</p>
@@ -41,10 +41,24 @@ export default async function Home () {
           <p>in Fußgängerzonen zwischen 7 und 20 Uhr und</p>
           <p>in militärischen Bereichen der Bundeswehr.</p>
         </div>
-        
+        <div className={styles.bubatz}>
+          <h1 className={styles.bubatzIntro}>Hier hilft die Platform Bubatzkarte, erstellt von einem Entwickler aus Koblenz, die: </h1>
+          <Link className={styles.link} href="https://bubatzkarte.de/" target="_blank">Bubatzkarte<Image className={styles.extern} src="/extern.svg" width="16" height="16" alt="external link" /></Link>
+        </div>
       </div>
       <div className={styles.kinder}>
         <h2>Kinder- und Jugendschutz</h2>
+        <h3 className={styles.kinderIntro}>In Bezug auf die Jugendlichen:</h3>
+        <div className={styles.kinderProtections}>
+      <ul className={styles.protections}>
+
+        <li className={styles.protections}><b>Konsumverbote nahe Minderjährigen:</b> Das Gesetz verbietet den Konsum von Cannabis in unmittelbarer Nähe von Personen unter 18 Jahren, um Jugendliche vor den Einflüssen und Risiken des Cannabiskonsums zu schützen.∂</li>
+
+        <li className={styles.protections}><b>Einschränkungen im öffentlichen Raum:</b> Spezielle Zonen, wie Schulen, Spielplätze und Jugendeinrichtungen, sind als cannabisfreie Bereiche definiert, um sicherzustellen, dass Minderjährige in diesen Umgebungen nicht mit Cannabis in Kontakt kommen.</li>
+
+        <li className={styles.protections}><b>Präventive Maßnahmen:</b> Anbauvereinigungen sind verpflichtet, präventive Maßnahmen durchzuführen und Aufklärungsarbeit zu leisten, die Jugendliche über die Risiken des Cannabiskonsums informieren.</li>
+      </ul>
+      </div>
       </div>
       <div className={styles.auto}>
         <h2>Auto fahren und Cannabis</h2>
@@ -67,11 +81,6 @@ export default async function Home () {
         <p className={styles.outro}>Falls Sie oder jemand, den Sie kennen, eines der oben genannten Symptome aufweist, kontaktieren Sie sofort die Giftnotrufzentrale unter der Telefonnummer <a className={styles.link} href={`tel:${+4930340606602}`}>(030) 340 60 66-02</a> für Hilfe zu jeder Zeit.</p>
         <p className={styles.outro}>Bei schweren Symptomen rufen Sie umgehend den Notruf 112 an oder begeben Sie sich in die nächste Notaufnahme.</p>
         <p>Bitte beachten Sie, dass der Konsum von Cannabis erst ab 18 Jahren legal ist und in der Nähe von Schulen, Kindergärten und auf öffentlichen Spielplätzen sowie in Fußgängerzonen während der Hauptverkehrszeiten verboten bleibt.</p>
-      </div>
-
-      <div className={styles.bubatz}>
-      <h2 className={styles.title}>Wo rauchen? </h2>
-      <Link className={styles.link} href="https://bubatzkarte.de/" target="_blank">Bubatzkarte<Image className={styles.extern} src="/extern.svg" width="16" height="16" alt="external link" /></Link>
       </div>
       <Feedback />
     </section>

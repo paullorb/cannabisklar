@@ -1,9 +1,7 @@
 "use client";
 
-import React from 'react';
 import styles from '../Medien.module.css';
 import Link from 'next/link';
-import { format } from 'date-fns';
 
 // Adjusted interface for client-side use
 interface ITagesschauClient {
@@ -34,23 +32,21 @@ const MedienComponent: React.FC<MedienProps> = ({ data, errMsg }) => {
       }
     });
 
-    const currentDate = format(new Date(), 'dd.MM.yyyy')
-
   return (
     <section className={styles.container}>
         <h1 className={styles.heading}> Medien</h1>
       <div className={styles.intro}>
         <h2 className={styles.subheading}>Aktualisiert: </h2>
-        {<h2 className={styles.subsubheading}>{currentDate}</h2>}
+        {<h2 className={styles.subsubheading}>22.05.2024</h2>}
       </div>
       <div className={styles.media}>
         <div className={styles.tagesschau}>
           <h1>Tagesschau</h1>
           {filteredData.map((item) => {
             const date = new Date(item.date);
-            const formattedDate = `${date.getDate().toString().padStart(2, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear()}`;
+            const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
             return item.detailsweb ? (
-              <Link key={item._id} href={item.detailsweb} className={styles.link}>
+              <Link key={item._id} href={item.detailsweb} className={styles.link} target="_blank">
                 <div className={styles.item}>
                   <h2 className={styles.title}>{item.title}</h2>
                   <span className={styles.date}>{formattedDate}</span>
