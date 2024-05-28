@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { getTagesschau } from '../../../_actions/tagesschauAction';
 import MedienComponent from './(components)/Medien';
+import { set } from 'mongoose';
 
 // Adjusted interface for client-side use
 interface ITagesschauClient {
@@ -15,10 +16,12 @@ interface ITagesschauClient {
 export default function Medien() {
   const [data, setData] = useState<ITagesschauClient[]>([]);
   const [errMsg, setErrMsg] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setIsLoading(true);
         const result = await getTagesschau();
         if (result.errMsg) {
           setErrMsg(result.errMsg);
@@ -34,11 +37,17 @@ export default function Medien() {
       } catch (error) {
         console.error('Failed to load data', error);
         setErrMsg('Failed to load data');
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   return <MedienComponent data={data} errMsg={errMsg} />;
 }
