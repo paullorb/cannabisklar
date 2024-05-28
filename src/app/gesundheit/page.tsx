@@ -1,4 +1,4 @@
-import styles from "./gesundheit.module.css";
+import styles from "./Gesundheit.module.css";
 
 export default function Gesundheit () {
   return (
