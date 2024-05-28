@@ -1,7 +1,5 @@
 import styles from './styles/Feedback.module.css';
 
-import Image from 'next/image';
-
 export default function Feedback() {
   return (
     <div className={styles.container}>

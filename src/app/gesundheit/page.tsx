@@ -1,22 +1,27 @@
-import Link from "next/link";
+import styles from "./gesundheit.module.css";
 
 export default function Gesundheit () {
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Gesundheit</h1>
-      <h2>Suchtprävention</h2>
-      <div>Schule</div>
-      <p>Durch eine Förderung der sozialen Kompetenz bei Kindern</p>
-      <p>Sie für die soziale Einflussnahme durch Gleichaltrige zu sensibilisieren</p>
-      <div>Familie</div>
-      <div>Hochschule</div>
-      <div>Medien</div>
-      <div>Gesundheitseinrichtungen</div>
-      <div>Kommune</div>
-      <h5>Nützliche Links:</h5>
-        <Link href="https://shop.bzga.de/pdf/3495.pdf">Quelle</Link>
-        <Link href="https://www.cannabispraevention.de/service/infomaterialien/">CannabisPrävention</Link>
-        <Link href="https://www.infos-cannabis.de/">Infos-Cannabis.de</Link>
+
+        <div className={styles.werbeverbot}>
+          <h2>§ 6 Werbeverbot</h2>
+          <p>Werbung und jede Form des Sponsorings für Cannabis und für Anbauvereinigungen sind verboten.</p>
+        </div>
+        <div className={styles.frühintervention}>
+          <h2>§ 7 Frühintervention</h2>
+          <p>Verstößt eine minderjährige Person gegen bestimmte Vorschriften, hat die zuständige Polizei- und Ordnungsbehörde unverzüglich die Personensorgeberechtigten zu informieren.</p>
+        </div>
+        <div className={styles.suchtprävention}>
+          <h2><span className={styles.referenz}> § 8</span> Suchtprävention</h2>
+          <h3>
+            Die Bundeszentrale für gesundheitliche Aufklärung (BZgA) errichtet eine digitale Plattform, die nutzerfreundlich und adressatengerecht Informationen bereitstellt, insbesondere über:
+          </h3>
+          <ol>
+          </ol>
+        </div>
+
     </div>
   );
 }

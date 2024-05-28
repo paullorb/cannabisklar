@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { getTagesschau } from '../../../_actions/tagesschauAction';
 import MedienComponent from './(components)/Medien';
-import { set } from 'mongoose';
 
 // Adjusted interface for client-side use
 interface ITagesschauClient {
