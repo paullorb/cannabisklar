@@ -42,7 +42,7 @@ export default async function Home () {
           <p>in militärischen Bereichen der Bundeswehr.</p>
         </div>
         <div className={styles.bubatz}>
-          <h1 className={styles.bubatzIntro}>Hier hilft die Platform Bubatzkarte, erstellt von einem Entwickler aus Koblenz, die: </h1>
+          <h1 className={styles.bubatzIntro}>Hier hilft die Platform Bubatzkarte, erstellt von einem Entwickler aus Koblenz. Die: </h1>
           <Link className={styles.link} href="https://bubatzkarte.de/" target="_blank">Bubatzkarte<Image className={styles.extern} src="/extern.svg" width="16" height="16" alt="external link" /></Link>
         </div>
       </div>
