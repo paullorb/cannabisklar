@@ -17,8 +17,9 @@
 }
 
 .selected {
-  border: 2px solid var(--e-green);
+  background-color: var(--e-green);
   border-radius: 50%;
+  filter: grayscale(0%);
 }
 
 .danke {
