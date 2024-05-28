@@ -9,7 +9,7 @@ export default function TopBar () {
   const currentHour = format(new Date(), 'HH')
   const currentMin = format(new Date(), 'mm')
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <div className={styles.internationalization}>
         <div className={`${styles.lang} ${styles.deutsch}`}>
           <button className={styles.button}>deu</button>
@@ -31,6 +31,6 @@ export default function TopBar () {
             }
           </div>
         </div> */}
-    </div>
+    </nav>
   )
 }

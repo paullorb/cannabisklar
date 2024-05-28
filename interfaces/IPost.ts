@@ -20,5 +20,9 @@ export interface ITagesschauClient extends Document {
   _id: string;
   title: string;
   detailsweb: string;
-  date: string,
+  date: string;
+}
+
+export interface IFeedback extends Document {
+  message: string;
 }

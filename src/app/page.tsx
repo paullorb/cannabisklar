@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import styles from './App.module.css'
-import Feedback from '@/components/Feedback'
 
 export default async function Home () {
   const gesetzLink = "https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/cannabisgesetz.html";
@@ -82,7 +81,6 @@ export default async function Home () {
         <p className={styles.outro}>Bei schweren Symptomen rufen Sie umgehend den Notruf 112 an oder begeben Sie sich in die nächste Notaufnahme.</p>
         <p>Bitte beachten Sie, dass der Konsum von Cannabis erst ab 18 Jahren legal ist und in der Nähe von Schulen, Kindergärten und auf öffentlichen Spielplätzen sowie in Fußgängerzonen während der Hauptverkehrszeiten verboten bleibt.</p>
       </div>
-      <Feedback />
     </section>
   );
 }

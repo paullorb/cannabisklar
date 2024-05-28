@@ -1,7 +1,26 @@
-.form {
+.container {
   display: flex;
   flex-direction: column;
-  border: 3px solid red;
-  max-width: 600px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 1rem; 
+}
+
+.feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.feedback:hover {
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.heading {
+  font-size: 1rem;
+  opacity: 0.7;
+  font-weight: normal;
 }

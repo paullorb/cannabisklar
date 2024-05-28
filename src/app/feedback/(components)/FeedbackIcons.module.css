@@ -1,0 +1,26 @@
+.icon {
+  font-size: 1.3rem;
+  border: none;
+  background-color: transparent;
+  filter: grayscale(100%);
+  transition: 0.2s ease;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+}
+
+.icon:hover {
+  filter: grayscale(0%);
+  background-color: var(--e-green);
+}
+
+.selected {
+  border: 2px solid var(--e-green);
+  border-radius: 50%;
+}
+
+.danke {
+  opacity: 0.6;
+}

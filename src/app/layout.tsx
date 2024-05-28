@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import TopBar from '@/components/TopBar';
 
 import './global.css'
+import Feedback from '@/app/feedback/Feedback';
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function RootLayout({
         <TopBar />
         <NavPrimary />
         {children}
+        <Feedback />
         <SpeedInsights />
         <Analytics />
         <Footer />
