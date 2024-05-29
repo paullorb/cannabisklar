@@ -11,7 +11,6 @@ export default function Home() {
   useEffect(() => {
     const handleIntersecting = (sectionId:string) => {
       setCurrentSection(sectionId);
-      console.log('Intersecting section:', sectionId);
     };
 
     const observer = initializeScrollspy(handleIntersecting);

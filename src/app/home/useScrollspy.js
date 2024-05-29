@@ -12,7 +12,7 @@ const initializeScrollspy = (onIntersecting) => {
   };
   
   const options = {
-    rootMargin: '0px',
+    rootMargin: '0%',
     threshold: 0.5
   };
 
