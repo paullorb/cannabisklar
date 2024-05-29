@@ -1,29 +1,34 @@
 "use client"
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Home.module.css';
-import useScrollspy from './useScrollSpy';
+import initializeScrollspy from './useScrollspy';
+import NavVertical from './NavVertical'; // Fix the import statement to use the correct filename
 
 export default function Home() {
-  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-  const currentSectionIndex = useScrollspy(sectionsRef.current.filter((el): el is HTMLElement => el !== null));
+  const [currentSection, setCurrentSection] = useState('');
 
   useEffect(() => {
-    sectionsRef.current = Array.from(document.querySelectorAll('section'));
+    const handleIntersecting = (sectionId:string) => {
+      setCurrentSection(sectionId);
+      console.log('Intersecting section:', sectionId);
+    };
+
+    const observer = initializeScrollspy(handleIntersecting);
+
+    // Cleanup function to unobserve sections when the component unmounts
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <div>
-      <nav>
-        <a href="#section1" className={currentSectionIndex === 0 ? styles.active : ''}>Section 1</a>
-        <a href="#section2" className={currentSectionIndex === 1 ? styles.active : ''}>Section 2</a>
-      </nav>
-      <section id="section1" ref={el => { sectionsRef.current[0] = el; }}>
-        {/* Section 1 content */}
-      </section>
-      <section id="section2" ref={el => { sectionsRef.current[1] = el; }}>
-        {/* Section 2 content */}
-      </section>
-    </div>
+    <main className={styles.container}>
+      <NavVertical currentSection={currentSection} />
+      <section id="section1" className={`${styles.section} ${styles.section1}`}>Section 1</section>
+      <section id="section2" className={`${styles.section} ${styles.section2}`}>Section 2</section>
+      <section id="section3" className={`${styles.section} ${styles.section3}`}>Section 3</section>
+      {currentSection && <div>Currently in view: {currentSection}</div>}
+    </main>
   );
 }
