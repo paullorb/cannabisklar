@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 
-import { rubik, roboto } from './fonts'
+import { rubik, roboto } from './styles/fonts'
 
 import NavPrimary from '../components/NavPrimary'
 import Footer from '../components/Footer'
 import TopBar from '@/components/TopBar';
 
-import './global.css'
+import './styles/global.css'
 import Feedback from '@/app/feedback/Feedback';
 
 export const metadata: Metadata = {

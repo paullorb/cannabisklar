@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import styles from './App.module.css'
+import styles from './styles/App.module.css'
 
 export default async function Home () {
   const gesetzLink = "https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/cannabisgesetz.html";
@@ -23,7 +23,7 @@ export default async function Home () {
       <div className={styles.medcan}>
         <h2>Medizinisches Cannabis</h2>
         <h3>Cannabis zu medizinischen Zwecken darf nur von Ärzten verschrieben und in Apotheken gegen ein gültiges Rezept an Patienten abgegeben werden.</h3>
-        <p>Seit dem 1. April 2024 können Ärzte medizinisches Cannabis auf normalem Rezept verordnen, ohne dass ein Betäubungsmittelrezept erforderlich ist.</p><p>Diese <a className={styles.link} href={gesetzLink}>Änderung<Image className={styles.extern} src="/extern.svg" width="16" height="16" alt="external link" /></a> ergibt sich aus dem neuen „Gesetz zum kontrollierten Umgang mit Cannabis und zur Änderung weiterer Vorschriften“.</p>
+        <p>Seit dem 1. April 2024 können Ärzte medizinisches Cannabis auf normalem Rezept verordnen, ohne dass ein Betäubungsmittelrezept erforderlich ist.</p><p>Diese Änderung ergibt sich aus dem neuen „Gesetz zum kontrollierten Umgang mit Cannabis und zur Änderung weiterer Vorschriften“.</p>
       </div>
       <div className={styles.konsum}>
         <h2>Konsum von Cannabis in Deutschland</h2>
