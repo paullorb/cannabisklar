@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from './FeedbackIcons.module.css'
 
 
@@ -10,6 +10,12 @@ export default function FeedbackIcons () {
   const [error, setError] = useState('')
   const [selectedEmoji, setSelectedEmoji] = useState('')
   const [moreFeedback, setMoreFeedback] = useState(false)
+  const [pageUrl, setPageUrl] = useState('')
+
+  useEffect(() => {
+    setPageUrl(window.location.href)
+    console.log(pageUrl)
+  }, [pageUrl])
 
   const handleMoreFeedback = (emoji: string) => {
     setSelectedEmoji(emoji)

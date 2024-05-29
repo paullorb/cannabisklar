@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN npm i
+RUN npm install
 
 COPY . .
 
@@ -12,4 +12,4 @@ RUN npm run build
 
 COPY .next .next
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start-dev"]

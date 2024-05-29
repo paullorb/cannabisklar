@@ -35,10 +35,8 @@
 }
 
 .underlineNOT{
+  color: rgba(255, 0, 0, 0.8);
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: rgb(240, 0, 0);
-  text-decoration-thickness: 2.5px;
   white-space: nowrap;
 }
 
