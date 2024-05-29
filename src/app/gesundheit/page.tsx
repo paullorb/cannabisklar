@@ -2,7 +2,7 @@ import styles from "./Gesundheit.module.css";
 
 export default function Gesundheit () {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h1>Gesundheit</h1>
 
         <div className={styles.werbeverbot}>
@@ -22,6 +22,6 @@ export default function Gesundheit () {
           </ol>
         </div>
 
-    </div>
+    </section>
   );
 }
