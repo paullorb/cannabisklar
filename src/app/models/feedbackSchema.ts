@@ -1,5 +1,5 @@
 import { Schema, model, Model } from 'mongoose'
-import { IFeedback } from '@/app/interfaces/IPost'
+import { IFeedback } from '@/app/interfaces/types'
 
 const feedbackSchema = new Schema <IFeedback>({
   selectedEmoji: {

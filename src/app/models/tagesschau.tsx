@@ -1,5 +1,5 @@
 import { Schema, model, Model } from 'mongoose'
-import { ITagesschau } from '@/app/interfaces/IPost'
+import { ITagesschau } from '@/app/interfaces/types'
 
 const tagesschauSchema = new Schema<ITagesschau> ({
   title: {

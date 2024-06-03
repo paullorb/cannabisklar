@@ -1,7 +1,7 @@
 "use server"
 import connectDB from "../lib/dbConnect";
 import TagesschauModel from "@/app/models/tagesschau";
-import { ITagesschau } from "../interfaces/IPost";
+import { ITagesschau } from "../interfaces/types";
 
 interface GetTagesschauRes {
   data?: ITagesschau[];
