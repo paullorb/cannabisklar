@@ -14,7 +14,7 @@ export default function FeedbackIcons () {
 
   useEffect(() => {
     setPageUrl(window.location.href)
-    console.log(pageUrl)
+    // console.log(pageUrl)
   }, [pageUrl])
 
   const handleMoreFeedback = (emoji: string) => {

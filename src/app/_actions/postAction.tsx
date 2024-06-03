@@ -1,8 +1,8 @@
 "use server"
 
-import connectDB from "../lib/dbConnect"
-import PostModel from "../models/postModel"
-import { IPost } from "../interfaces/IPost"
+import connectDB from "@/app/lib/dbConnect";
+import PostModel from "@/app/models/postModel";
+import { IPost } from "@/app/interfaces/IPost";
 
 interface GetPostsResponse {
   data?: IPost[];

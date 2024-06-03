@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { getTagesschau } from '../../../_actions/tagesschauAction';
+import { getTagesschau } from '@/app/_actions/tagesschauAction';
 import MedienComponent from './(components)/Medien';
 
 // Adjusted interface for client-side use
