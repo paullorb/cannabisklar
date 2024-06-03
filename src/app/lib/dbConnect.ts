@@ -1,28 +1,30 @@
-import mongoose from "mongoose";
+// lib/dbConnect.js
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const connectDB = async (dbName = 'default'): Promise<void> => {
+const connectDB = async (dbName = 'default') => {
+  const dbURI = process.env.MONGO_URI || "";
+  if (!dbURI) throw new Error("MongoDB URI is not defined in environment variables.");
 
-  if (mongoose.connection.readyState) {
-    console.log('Already connected to MongoDB.')
-    return
+  // Check if we're already connected to the intended database
+  if (mongoose.connection.readyState && mongoose.connection.db.databaseName === dbName) {
+    console.log('Already connected to MongoDB:', dbName);
+    return;
   }
 
-  const dbURI = process.env.MONGO_URI || ""
-  if (!dbURI) throw new Error("MongoDB URI is not defined in environment variables.")
-
+  // Close existing connections before switching databases
+  if (mongoose.connection.readyState) {
+    await mongoose.connection.close();
+  }
 
   try {
-
-    const dbOptions = { dbName }
-
-    await mongoose.connect(dbURI, dbOptions)
-
+    await mongoose.connect(dbURI, { dbName });
+    console.log(`Connected to MongoDB: ${dbName}`);
   } catch (error) {
-
-    throw error
+    console.error('Connection error:', error);
+    throw error;  // Rethrow to handle it outside
   }
-}
+};
 
-export default connectDB
+export default connectDB;

@@ -1,8 +1,6 @@
 "use server"
-
 import connectDB from "../lib/dbConnect";
-import mongoose from 'mongoose';
-import TaggesschauModel from "@/app/models/tagesschau";
+import TagesschauModel from "@/app/models/tagesschau";
 import { ITagesschau } from "../interfaces/IPost";
 
 interface GetTagesschauRes {
@@ -12,11 +10,11 @@ interface GetTagesschauRes {
 
 export async function getTagesschau(): Promise<GetTagesschauRes> {
   try {
-    await connectDB();
+    // Specify the database name directly here
+    await connectDB('tagesschau');
 
-    const tagesschauDB = mongoose.connection.useDb('tagesschau', { useCache: true });
-    const data = await tagesschauDB.model('21-05-24', TaggesschauModel.schema).find().lean();
-
+    // After ensuring the connection, directly use the model that is connected to the 'tagesschau' DB
+    const data = await TagesschauModel.find().lean<ITagesschau[]>();
     return { data };
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error';

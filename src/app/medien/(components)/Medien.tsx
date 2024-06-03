@@ -18,7 +18,7 @@ interface MedienProps {
 
 const MedienComponent: React.FC<MedienProps> = ({ data, errMsg }) => {
   if (errMsg) {
-    return <h1>{errMsg}</h1>;
+    return <h1>hey hey{errMsg}</h1>;
   }
 
     // Filter out duplicate titles
