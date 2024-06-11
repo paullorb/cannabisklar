@@ -13,7 +13,7 @@ export default async function Home () {
       </div>
       <div>
         <h2>Besitz, Erhalt und Anbau von Cannabis in Deutschland</h2>
-        <h3>Erwachsenen ist es ab dem 1. Juli 2024 erlaubt:</h3>
+        <h3>Erwachsenen ist es ab dem 1. April 2024 erlaubt:</h3>
         <ul>
           <li>bis zu 50 Gramm zuhause besitzen und bis zu 25 Gram in der Öffentlichkeit</li>
           <li>bis zu 3 lebende weibliche Pflanzen zuhause haben</li>
